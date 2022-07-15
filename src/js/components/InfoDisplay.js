@@ -12,11 +12,14 @@ var InfoDisplay = /** @class */ (function () {
         var element = document.createElement("div");
         this.classList.forEach(function (classname) { return element.classList.add(classname); });
         element.innerHTML = String(this.id);
-        element.addEventListener("click", this.onclick);
+        element.addEventListener("click", this.onclick());
         return element;
     };
-    InfoDisplay.prototype.onclick = function (event) {
-        this.root["return"]();
+    InfoDisplay.prototype.onclick = function () {
+        var instance = this;
+        return function (event) {
+            instance.root["return"]();
+        };
     };
     return InfoDisplay;
 }());

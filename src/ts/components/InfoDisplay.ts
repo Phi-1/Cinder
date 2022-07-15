@@ -30,7 +30,7 @@ export default class InfoDisplay implements Component {
     onclick(): EventListener {
         const instance = this
         return (event) => {
-            this.root.return()
+            instance.root.return()
         }
     }
     

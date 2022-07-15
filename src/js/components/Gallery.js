@@ -40,9 +40,10 @@ var GalleryItem = /** @class */ (function () {
         return this.element;
     };
     GalleryItem.prototype.onclick = function () {
+        var _this = this;
         var instance = this;
         return function (event) {
-            instance.root.render(new InfoDisplay(this.root, this.id));
+            instance.root.render(new InfoDisplay(_this.root, _this.id));
         };
     };
     return GalleryItem;

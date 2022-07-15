@@ -5,6 +5,8 @@ var App = /** @class */ (function () {
     }
     App.prototype.render = function (component, up) {
         if (up === void 0) { up = true; }
+        console.log(this.viewStack);
+        console.log(component);
         while (this.root.firstChild) {
             this.root.removeChild(this.root.firstChild);
         }
@@ -15,7 +17,6 @@ var App = /** @class */ (function () {
         this.root.appendChild(component.getElement());
     };
     App.prototype["return"] = function () {
-        this.viewStack.pop();
         this.render(this.viewStack[this.viewStack.length - 1], false);
     };
     return App;
