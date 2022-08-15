@@ -1,7 +1,9 @@
 {
-    "include": ["src/ts/**/*"],
     "compilerOptions": {
         "outDir": "src/js",
-        "module": "es6"
-    }
+        "module": "es6",
+        "lib": ["ES6", "DOM"],
+        "target": "ES6"
+    },
+    "include": ["src/ts/**/*"]
 }
