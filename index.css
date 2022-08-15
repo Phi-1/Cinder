@@ -1,0 +1,10 @@
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    background-color: brown;
+}
